@@ -1,6 +1,6 @@
 # US Rat Complaint Atlas
 
-An open, interactive map of **rat and rodent complaints from ten US cities**, built entirely from
+An open, interactive map of **rat and rodent complaints from twelve US cities**, built entirely from
 live municipal 311 open-data APIs — **1,522,914 geolocated complaint records across 12 cities, 2012 → today**.
 
 **Live app:** https://parksiihu7.github.io/us-311-rat-map/
@@ -56,8 +56,8 @@ begins in June 2017; Baton Rouge's and New Orleans' systems start in 2019; San F
 service detail goes quiet after February 2024 and 28% of its rodent cases carry no coordinates.
 
 Exact per-city filters, field mapping, licences and the list of cities **checked and excluded**
-(Seattle, Los Angeles, San Francisco, Philadelphia, Dallas, Nashville, Louisville, Houston and
-others have no rodent-specific 311 category) are in [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md).
+(Seattle, Los Angeles, Philadelphia, Dallas, Nashville, Louisville, Houston and others have no
+rodent-specific 311 category) are in [docs/DATA_SOURCES.md](docs/DATA_SOURCES.md).
 
 ## The data model
 
