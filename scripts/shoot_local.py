@@ -26,8 +26,13 @@ def serve():
 def main():
     out = sys.argv[1] if len(sys.argv) > 1 else "/workspace/downloads/poidh-1570-rat-map.png"
     query = sys.argv[2] if len(sys.argv) > 2 else ""
-    srv, port = serve()
-    url = f"http://127.0.0.1:{port}/index.html{query}"
+    target = sys.argv[3] if len(sys.argv) > 3 else "local"
+    if target.startswith("http"):
+        srv, port = None, None
+        url = target + query
+    else:
+        srv, port = serve()
+        url = f"http://127.0.0.1:{port}/index.html{query}"
     errors = []
     with sync_playwright() as p:
         browser = p.chromium.launch(executable_path=os.path.expanduser("~/.cache/ms-playwright/chromium-1200/chrome-linux64/chrome"), args=["--no-sandbox","--force-device-scale-factor=1"])
@@ -50,7 +55,7 @@ def main():
         for e in errors[:20]:
             print("console:", e)
         browser.close()
-    srv.shutdown()
+    if srv: srv.shutdown()
 
 
 if __name__ == "__main__":
