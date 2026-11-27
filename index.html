@@ -27,7 +27,7 @@
   <aside id="panel">
     <h2>Cities</h2>
     <div class="presets" id="city-presets">
-      <button data-cities="all">All 10</button>
+      <button data-cities="all">All cities</button>
       <button data-cities="big">Big six</button>
       <button data-cities="none">Clear</button>
     </div>
@@ -45,7 +45,7 @@
       <button data-range="all">All years</button>
     </div>
 
-    <h2>In view</h2>
+    <h2>Selected data</h2>
     <div class="big"><span id="stat-total">—</span><small id="stat-total-label">geolocated complaints</small></div>
     <div class="sub" id="stat-sub"></div>
     <canvas id="spark"></canvas>
@@ -82,8 +82,8 @@
     <h2>Where this map comes from</h2>
     <p>
       Every record is pulled by <code>scripts/fetch_311.py</code> from a public municipal 311 API —
-      Socrata (NYC, Chicago, Cincinnati, Cambridge, Baton Rouge), CKAN (Boston, Pittsburgh) or ArcGIS
-      REST (Washington DC, Baltimore, Detroit). Nothing is synthetic, modelled, or hand-entered. The
+      Socrata (NYC, Chicago, San Francisco, Cincinnati, Cambridge, Baton Rouge, New Orleans), CKAN
+      (Boston, Pittsburgh) or ArcGIS REST (Washington DC, Baltimore, Detroit). Nothing is synthetic, modelled, or hand-entered. The
       script can be re-run at any time; it refetches the current year and adds new years as they appear.
     </p>
     <div class="note">
@@ -104,10 +104,11 @@
     </p>
     <h3>Limitations</h3>
     <ul>
-      <li>Only cities that publish a rodent-specific 311 category <i>with</i> coordinates are included. Large cities that don't (e.g. Seattle, Los Angeles, San Francisco, Philadelphia, Dallas) are documented as checked and excluded rather than approximated.</li>
+      <li>Only cities that publish a rodent-specific 311 category <i>with</i> coordinates are included. Large cities that don't (Seattle, Los Angeles, Philadelphia, Dallas, Houston, Nashville and others) are documented as checked and excluded rather than approximated — see <code>docs/DATA_SOURCES.md</code> in the repository.</li>
       <li>Baltimore's scheduled baiting runs (<code>SW-Rat Rubout Proactive</code>, about 95% of its rodent rows) are excluded: they are the city's work calendar, not resident reports.</li>
       <li>Chicago drops requests flagged <code>duplicate = true</code>; the historical Chicago dataset has no such flag.</li>
       <li>Coordinates are published by the city, snapped to the address or block level. Rounding to 5 decimals is applied only for file size.</li>
+      <li>San Francisco's rodent service detail stops in February 2024 and 28% of its rodent cases have no coordinates; Boston has no 2014 rows because its 2014 resource is empty.</li>
       <li>Coverage start dates differ by city (2012–2019); see the table. The most recent day varies by city's publication lag.</li>
     </ul>
     <h3>License &amp; credit</h3>

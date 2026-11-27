@@ -5,6 +5,7 @@ estimated, or hand-entered. This file records the exact endpoint, filter and fie
 city, plus the cities that were checked and excluded and why.
 
 Fetched by [`scripts/fetch_311.py`](../scripts/fetch_311.py). Last full refresh: 2026‑11‑27.
+**12 cities · 1,522,914 geolocated records · 5,286 fetched records without coordinates.**
 
 ---
 
@@ -108,6 +109,31 @@ Fetched by [`scripts/fetch_311.py`](../scripts/fetch_311.py). Last full refresh:
 - **What it counts**: rodent sightings, dead-rodent reports, rat harborage complaints.
 - **Licence**: Cambridge Open Data terms.
 
+### San Francisco, CA — 2,734 records
+- **Dataset**: `vw6y-z8j6` — 311 Cases.
+- **Endpoint**: `https://data.sfgov.org/resource/vw6y-z8j6.json`.
+- **Filter**: `service_details = 'Infestation_Rodent_Insect'`.
+- **Fields**: `service_request_id`, `requested_datetime`, `service_name`, `service_subtype`,
+  `service_details`, `lat`, `long`, `analysis_neighborhood`.
+- **What it counts**: 311 cases whose service detail is a rodent/insect infestation reported in a
+  building; they are routed to the Department of Public Health's vector-control programme.
+- **Licence**: DataSF open data terms.
+- **Notes**: 1,077 of 3,811 fetched SF records have no coordinates (28%) and are excluded — the
+  highest missing rate in the atlas. The dataset's rodent detail also goes quiet after 2024‑02‑28,
+  which is why San Francisco's series ends there rather than at the current month.
+
+### New Orleans, LA — 6,497 records
+- **Dataset**: `2jgv-pqrq` — 311 OPCD Calls (2012–present).
+- **Endpoint**: `https://data.nola.gov/resource/2jgv-pqrq.json`.
+- **Filter**: `request_type = 'Mosquito, Termite & Rodent Control' AND request_reason IN ('Rodent Complaint (Mice & Rats)','Rodent Complaint (Rats)')`.
+- **Fields**: `service_request`, `request_type`, `request_reason`, `date_created`, `latitude`,
+  `longitude`, `address_councildis`.
+- **What it counts**: calls to the Mosquito, Termite & Rodent Control Board specifically about rats
+  or mice. Mosquito and termite calls in the same request type — and the board's explicit
+  “Non-Rodent Complaint (Mice, Possums, Snakes)” reasons — are excluded.
+- **Licence**: Open Data NOLA terms of use.
+- **Notes**: coverage starts 2019‑01‑01.
+
 ### Cincinnati, OH — 4,056 records
 - **Dataset**: `gcej-gmiw` — Cincinnati 311 (Non-Emergency) Service Requests.
 - **Endpoint**: `https://data.cincinnati-oh.gov/resource/gcej-gmiw.json`.
@@ -129,13 +155,11 @@ because the data was inconvenient.
 |---|---|---|
 | Seattle, WA | `data.seattle.gov/5ngg-rpne` (Customer Service Requests) | All 47 request types enumerated; none is rat/rodent related (closest: “Dead Animal”, “General Inquiry – Animal Shelter”). Rats are handled by Public Health – Seattle & King County, outside 311. |
 | Los Angeles, CA | `data.lacity.org/rq3b-xjk8` (MyLA311) | 12 request types; no rodent category (closest: “Dead Animal Removal”). |
-| San Francisco, CA | `data.sfgov.org/vw6y-z8j6` (311 Cases) | No rodent case type; rats appear only inside free-text notes of generic building/DPH requests, which cannot be filtered reliably. |
 | Philadelphia, PA | `phl.carto.com` `public_cases_fc` | 40+ service names checked; no rodent category. |
 | Dallas, TX | `dallasopendata.com/4n3h-rfqm` | No rodent service request type. |
 | Nashville, TN | `hubNashville` 311 ArcGIS service | 205 distinct `Request_Type` values; none rodent related. |
 | Louisville, KY | Metro 311 ArcGIS services | 55 distinct service names; none rodent related. |
 | Houston, TX | Houston 311 ArcGIS service | 132 distinct `CASE_TYPE` values; none rodent related. |
-| New Orleans, LA | `data.nola.gov/2jgv-pqrq` | No rodent request type. |
 | Kansas City, MO | `data.kcmo.org` 311 datasets | Per-record 311 data is aggregated by issue type only; no geocoded individual rodent requests. |
 | Norfolk, VA | `data.norfolk.gov/nbyu-xjez` | Has “Rat Observed” (1,278) and “Potential Rat Harborage” (734) — but no coordinates in the dataset. |
 | Somerville, MA | `data.somervillema.gov/4pyi-uqq6` | Has “Rats” (8,824) and a Rodent Assistance Program — but no coordinates in the dataset. |
@@ -159,6 +183,8 @@ entry in `build_city_specs()`, and a re-run.
 | Detroit | City of Detroit | Detroit Open Data Terms of Use |
 | Pittsburgh | City of Pittsburgh / WPRDC | CC BY 4.0 |
 | Cambridge | City of Cambridge | Cambridge Open Data Terms of Use |
+| San Francisco | City & County of San Francisco | DataSF Open Data Terms of Use |
+| New Orleans | City of New Orleans | Open Data NOLA Terms of Use |
 | Cincinnati | City of Cincinnati | Cincinnati Open Data Terms of Use |
 
 Redistribution here is under each city's own open-data terms; the code is MIT.

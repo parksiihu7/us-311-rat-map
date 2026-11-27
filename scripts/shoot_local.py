@@ -46,7 +46,8 @@ def main():
             "() => { const e=document.getElementById('stat-total'); return e && parseInt(e.textContent.replace(/,/g,'')) > 1000; }",
             timeout=180000,
         )
-        page.wait_for_timeout(6000)
+        page.wait_for_function("() => !document.getElementById('loadbar').classList.contains('show')", timeout=240000)
+        page.wait_for_timeout(3000)
         total = page.eval_on_selector("#stat-total", "e => e.textContent")
         print("stat-total:", total)
         print("badge:", page.eval_on_selector("#top-badge", "e => e.textContent"))

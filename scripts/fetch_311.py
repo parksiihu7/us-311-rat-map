@@ -511,6 +511,30 @@ def build_city_specs():
             "iter": cambridge_iter_year,
         },
         {
+            "slug": "san-francisco", "city": "San Francisco", "state": "CA", "short": "San Francisco",
+            "source_name": "DataSF - 311 Cases",
+            "source_url": "https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6",
+            "dataset_ids": "vw6y-z8j6",
+            "filter": "service_details = 'Infestation_Rodent_Insect'",
+            "definition": "San Francisco 311 cases whose service detail is Infestation_Rodent_Insect (rodent or insect infestation reported in a building), handled by the Department of Public Health's vector control programme.",
+            "fields": "service_request_id, requested_datetime, service_name, service_subtype, service_details, lat, long",
+            "license": "DataSF open data terms",
+            "types": ["Infestation_Rodent_Insect"],
+            "iter": sf_iter_year,
+        },
+        {
+            "slug": "new-orleans", "city": "New Orleans", "state": "LA", "short": "New Orleans",
+            "source_name": "Open Data NOLA - 311 Calls",
+            "source_url": "https://data.nola.gov/resource/2jgv-pqrq",
+            "dataset_ids": "2jgv-pqrq (311 OPCD Calls, 2012-present)",
+            "filter": "request_type = 'Mosquito, Termite & Rodent Control' AND request_reason IN ('Rodent Complaint (Mice & Rats)','Rodent Complaint (Rats)')",
+            "definition": "New Orleans 311 calls to the Mosquito, Termite & Rodent Control Board specifically about rats or mice. Mosquito/termite calls in the same request type, and the board's explicit 'Non-Rodent Complaint' reasons, are excluded.",
+            "fields": "service_request, request_type, request_reason, date_created, latitude, longitude, address_councildis",
+            "license": "Open Data NOLA terms of use",
+            "types": ["Rodent Complaint (Rats)", "Rodent Complaint (Mice & Rats)"],
+            "iter": nola_iter_year,
+        },
+        {
             "slug": "baton-rouge", "city": "Baton Rouge", "state": "LA", "short": "Baton Rouge",
             "source_name": "Open Data BR - Mosquito and Rodent Service Requests",
             "source_url": "https://data.brla.gov/resource/bktv-u9ua",
@@ -611,6 +635,44 @@ def cincy_iter_year(year):
             nocoord += 1
             continue
         out.append((d, c[0], c[1], (row.get("sr_type_desc") or "RATS").strip(), 1))
+    return out, nocoord
+
+
+def sf_iter_year(year):
+    dataset = ("data.sfgov.org", "vw6y-z8j6")
+    where = "service_details = 'Infestation_Rodent_Insect'"
+    select = "service_request_id,requested_datetime,service_name,service_subtype,service_details,lat,long,analysis_neighborhood"
+    out, nocoord = [], 0
+    for row in socrata_pages(dataset, select, year_where("requested_datetime", year, where), order="service_request_id"):
+        d = parse_date(row.get("requested_datetime"))
+        if d is None:
+            continue
+        c = coords(row.get("lat"), row.get("long"))
+        if c is None:
+            nocoord += 1
+            continue
+        out.append((d, c[0], c[1], "Infestation_Rodent_Insect", 1))
+    return out, nocoord
+
+
+NOLA_WHERE = ("request_type = 'Mosquito, Termite & Rodent Control' AND "
+              "request_reason IN ('Rodent Complaint (Mice & Rats)','Rodent Complaint (Rats)')")
+
+
+def nola_iter_year(year):
+    dataset = ("data.nola.gov", "2jgv-pqrq")
+    select = "service_request,request_type,request_reason,date_created,latitude,longitude,address_councildis"
+    out, nocoord = [], 0
+    for row in socrata_pages(dataset, select, year_where("date_created", year, NOLA_WHERE), order="service_request"):
+        d = parse_date(row.get("date_created"))
+        if d is None:
+            continue
+        c = coords(row.get("latitude"), row.get("longitude"))
+        if c is None:
+            nocoord += 1
+            continue
+        label = row.get("request_reason") or "Rodent Complaint"
+        out.append((d, c[0], c[1], label, 1))
     return out, nocoord
 
 

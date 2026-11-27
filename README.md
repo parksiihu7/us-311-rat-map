@@ -1,7 +1,7 @@
 # US Rat Complaint Atlas
 
 An open, interactive map of **rat and rodent complaints from ten US cities**, built entirely from
-live municipal 311 open-data APIs — **1,513,683 geolocated complaint records, 2012 → today**.
+live municipal 311 open-data APIs — **1,522,914 geolocated complaint records across 12 cities, 2012 → today**.
 
 **Live app:** https://parksiihu7.github.io/us-311-rat-map/
 
@@ -15,8 +15,8 @@ site, and lets anyone slice it by city and date and take the rows away as CSV.
 
 ## What it does
 
-- **One map, ten cities** — New York, Chicago, Washington DC, Baltimore, Boston, Baton Rouge,
-  Detroit, Pittsburgh, Cambridge and Cincinnati. Every dot is a real 311 record with coordinates
+- **One map, twelve cities** — New York, Chicago, Washington DC, Baltimore, Boston, Baton Rouge,
+  Detroit, Pittsburgh, New Orleans, Cambridge, Cincinnati and San Francisco. Every dot is a real 311 record with coordinates
   published by the city.
 - **Adaptive clustering** — the map aggregates points into screen-space cells at every zoom and
   splits them as you zoom in. It renders 1.5M points on a plain canvas, so there is no
@@ -43,14 +43,17 @@ site, and lets anyone slice it by city and date and take the rows away as CSV.
 | **Baton Rouge, LA** | 34,057 | 55 | 2019-02-07 → 2026-11-25 | [Open Data BR — Mosquito and Rodent Service Requests](https://data.brla.gov/resource/bktv-u9ua) |
 | **Detroit, MI** | 27,177 | 0 | 2017-06-14 → 2026-11-25 | [City of Detroit Open Data — Improve Detroit Issues](https://data.detroitmi.gov/datasets/improve-detroit-issues) |
 | **Pittsburgh, PA** | 8,384 | 81 | 2015-04-30 → 2026-11-24 | [WPRDC — Pittsburgh 311 Data](https://data.wprdc.org/dataset/pittsburgh-311-data) |
+| **New Orleans, LA** | 6,497 | 22 | 2019-01-01 → 2026-11-23 | [Open Data NOLA — 311 Calls](https://data.nola.gov/resource/2jgv-pqrq) |
 | **Cambridge, MA** | 5,312 | 0 | 2013-10-03 → 2026-11-23 | [Cambridge Open Data — Commonwealth Connect](https://data.cambridgema.gov/resource/2z9k-mv9g) |
 | **Cincinnati, OH** | 4,056 | 0 | 2012-01-04 → 2026-11-22 | [Cincinnati Open Data — 311 Service Requests](https://data.cincinnati-oh.gov/resource/gcej-gmiw) |
+| **San Francisco, CA** | 2,734 | 1,077 | 2012-01-09 → 2024-02-28 | [DataSF — 311 Cases](https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6) |
 
-**Total: 1,513,683 geolocated records · 4,187 records excluded for missing coordinates.**
+**Total: 1,522,914 geolocated records · 5,286 fetched records excluded for missing coordinates.**
 
 Coverage gaps worth knowing: Boston's 2014 resource is empty in Analyze Boston, so 2014 has no
 Boston rows; Washington's rodent code only starts in May 2013; Detroit's Improve Detroit data
-begins in June 2017; Baton Rouge's mosquito/rodent system starts in 2019.
+begins in June 2017; Baton Rouge's and New Orleans' systems start in 2019; San Francisco's rodent
+service detail goes quiet after February 2024 and 28% of its rodent cases carry no coordinates.
 
 Exact per-city filters, field mapping, licences and the list of cities **checked and excluded**
 (Seattle, Los Angeles, San Francisco, Philadelphia, Dallas, Nashville, Louisville, Houston and
@@ -121,8 +124,8 @@ refresh path for the live site.
 - **Excluded work orders**: Baltimore's scheduled baiting runs (`SW-Rat Rubout Proactive`, about
   95% of rodent rows in that dataset) are city work, not resident reports, and are left out.
   Chicago drops requests flagged `duplicate = true`.
-- **Missing coordinates** are counted per city and excluded from the map and CSV; they are 0.28% of
-  all rodent records fetched.
+- **Missing coordinates** are counted per city and excluded from the map and CSV; they are 0.35% of
+  all rodent records fetched (San Francisco alone accounts for 1,077 of them).
 - **Precision**: coordinates are rounded to 5 decimals (~1 m) purely for file size.
 - **Ordering**: CSV rows are emitted grouped by city and year, not sorted by date.
 

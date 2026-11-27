@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T02:41:12Z",
+ "generated": "2026-11-27T02:50:58Z",
  "cities": [
   {
    "slug": "nyc",
@@ -566,6 +566,85 @@
    "year_max": 2026
   },
   {
+   "slug": "san-francisco",
+   "city": "San Francisco",
+   "state": "CA",
+   "short": "San Francisco",
+   "source_name": "DataSF - 311 Cases",
+   "source_url": "https://data.sfgov.org/City-Infrastructure/311-Cases/vw6y-z8j6",
+   "dataset_ids": "vw6y-z8j6",
+   "filter": "service_details = 'Infestation_Rodent_Insect'",
+   "definition": "San Francisco 311 cases whose service detail is Infestation_Rodent_Insect (rodent or insect infestation reported in a building), handled by the Department of Public Health's vector control programme.",
+   "fields": "service_request_id, requested_datetime, service_name, service_subtype, service_details, lat, long",
+   "license": "DataSF open data terms",
+   "types": [
+    "Infestation_Rodent_Insect"
+   ],
+   "years": {
+    "2012": 117,
+    "2013": 124,
+    "2014": 138,
+    "2015": 221,
+    "2016": 222,
+    "2017": 253,
+    "2018": 301,
+    "2019": 186,
+    "2020": 289,
+    "2021": 393,
+    "2022": 192,
+    "2023": 171,
+    "2024": 127,
+    "2025": 0,
+    "2026": 0
+   },
+   "nocoord": 1077,
+   "n": 2734,
+   "date_min": "2012-01-09",
+   "date_max": "2024-02-28",
+   "year_min": 2012,
+   "year_max": 2026
+  },
+  {
+   "slug": "new-orleans",
+   "city": "New Orleans",
+   "state": "LA",
+   "short": "New Orleans",
+   "source_name": "Open Data NOLA - 311 Calls",
+   "source_url": "https://data.nola.gov/resource/2jgv-pqrq",
+   "dataset_ids": "2jgv-pqrq (311 OPCD Calls, 2012-present)",
+   "filter": "request_type = 'Mosquito, Termite & Rodent Control' AND request_reason IN ('Rodent Complaint (Mice & Rats)','Rodent Complaint (Rats)')",
+   "definition": "New Orleans 311 calls to the Mosquito, Termite & Rodent Control Board specifically about rats or mice. Mosquito/termite calls in the same request type, and the board's explicit 'Non-Rodent Complaint' reasons, are excluded.",
+   "fields": "service_request, request_type, request_reason, date_created, latitude, longitude, address_councildis",
+   "license": "Open Data NOLA terms of use",
+   "types": [
+    "Rodent Complaint (Rats)",
+    "Rodent Complaint (Mice & Rats)"
+   ],
+   "years": {
+    "2012": 0,
+    "2013": 0,
+    "2014": 0,
+    "2015": 0,
+    "2016": 0,
+    "2017": 0,
+    "2018": 0,
+    "2019": 4048,
+    "2020": 361,
+    "2021": 354,
+    "2022": 330,
+    "2023": 297,
+    "2024": 288,
+    "2025": 428,
+    "2026": 391
+   },
+   "nocoord": 22,
+   "n": 6497,
+   "date_min": "2019-01-01",
+   "date_max": "2026-11-23",
+   "year_min": 2012,
+   "year_max": 2026
+  },
+  {
    "slug": "baton-rouge",
    "city": "Baton Rouge",
    "state": "LA",
@@ -606,6 +685,6 @@
    "year_max": 2026
   }
  ],
- "total_records": 1513683,
- "total_nocoord": 4187
+ "total_records": 1522914,
+ "total_nocoord": 5286
 }

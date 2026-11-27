@@ -26,6 +26,8 @@ const CITY_CENTER = {
   cincinnati: [39.1031, -84.512],
   pittsburgh: [40.4406, -79.9959],
   cambridge: [42.3736, -71.1097],
+  "san-francisco": [37.7749, -122.4194],
+  "new-orleans": [29.9511, -90.0715],
   "baton-rouge": [30.4515, -91.1871],
 };
 
@@ -107,7 +109,7 @@ const S = {
   exporting: false,
 };
 
-const map = L.map("map", { zoomControl: false, preferCanvas: true, worldCopyJump: true }).setView([39.0, -83.5], 5);
+const map = L.map("map", { zoomControl: false, preferCanvas: true, worldCopyJump: true }).setView([38.2, -96.5], 4);
 L.control.zoom({ position: "bottomright" }).addTo(map);
 
 const baseLayers = {
@@ -314,17 +316,18 @@ function render() {
       if (d < fromDay || d > toDay) continue;
       const x = nx[i] * scale - bx;
       const y = ny[i] * scale - by;
-      if (x < -pad || y < -pad || x > w + pad || y > h + pad) continue;
-      const cx = (x / cellPx) | 0, cy = (y / cellPx) | 0;
-      const k = cy * cols + cx;
-      let cell = cells.get(k);
-      if (!cell) { cell = { x: cx * cellPx + cellPx / 2, y: cy * cellPx + cellPx / 2, n: 0, t: null, d0: d, d1: d }; cells.set(k, cell); }
-      cell.n++;
-      if (d < cell.d0) cell.d0 = d;
-      if (d > cell.d1) cell.d1 = d;
-      if (cell.n <= 400) {
-        if (!cell.t) cell.t = {};
-        const t = cell.t[types[i]] = (cell.t[types[i]] || 0) + 1;
+      if (x >= -pad && y >= -pad && x <= w + pad && y <= h + pad) {
+        const cx = (x / cellPx) | 0, cy = (y / cellPx) | 0;
+        const k = cy * cols + cx;
+        let cell = cells.get(k);
+        if (!cell) { cell = { x: cx * cellPx + cellPx / 2, y: cy * cellPx + cellPx / 2, n: 0, t: null, d0: d, d1: d }; cells.set(k, cell); }
+        cell.n++;
+        if (d < cell.d0) cell.d0 = d;
+        if (d > cell.d1) cell.d1 = d;
+        if (cell.n <= 400) {
+          if (!cell.t) cell.t = {};
+          cell.t[types[i]] = (cell.t[types[i]] || 0) + 1;
+        }
       }
       total++;
       if (d < minD) minD = d;
@@ -409,7 +412,7 @@ function updateStats() {
   const d1 = m.total ? iso(day2date(m.maxD)) : "—";
   document.getElementById("stat-sub").innerHTML =
     `${cityN} cit${cityN === 1 ? "y" : "ies"} · ${d0} → ${d1}<br>
-     <b>${fmt(m.maxCell)}</b> in the densest cell at this zoom`;
+     <b>${fmt(m.maxCell)}</b> in the largest cluster`;
 
   // monthly sparkline
   drawSpark(m.monthCounts);
@@ -744,6 +747,8 @@ async function boot() {
   map.on("moveend zoomend", scheduleRender);
   saveUrl();
   syncData();
+  window.__S = S;
+  window.__map = map;
   window.__atlasReady = true;
 }
 
