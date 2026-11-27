@@ -108,8 +108,9 @@ root with any static file server:
 python3 -m http.server 8000     # then open http://localhost:8000
 ```
 
-`.github/workflows/refresh.yml` runs the fetch weekly and commits new data, which is the production
-refresh path for the live site.
+`docs/refresh-workflow.yml` is a ready-to-use GitHub Actions workflow: copy it to
+`.github/workflows/refresh.yml` to refresh the data weekly and commit it (the deploy credential used
+to build this repository was not allowed to create workflow files).
 
 ## Methodology and honest limits
 
