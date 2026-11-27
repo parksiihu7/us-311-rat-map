@@ -36,7 +36,7 @@ def main():
     errors = []
     with sync_playwright() as p:
         browser = p.chromium.launch(executable_path=os.path.expanduser("~/.cache/ms-playwright/chromium-1200/chrome-linux64/chrome"), args=["--no-sandbox","--force-device-scale-factor=1"])
-        page = browser.new_page(viewport={"width": 1440, "height": 900}, device_scale_factor=1)
+        page = browser.new_page(viewport={"width": 1440, "height": int(os.environ.get("VH", "900"))}, device_scale_factor=1)
         page.on("console", lambda m: errors.append(f"{m.type}: {m.text}") if m.type in ("error", "warning") else None)
         page.on("pageerror", lambda e: errors.append(f"pageerror: {e}"))
         page.goto(url, wait_until="domcontentloaded", timeout=60000)
