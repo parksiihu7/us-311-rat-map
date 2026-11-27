@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>US Rat Complaint Atlas — 311 rodent reports from 10 cities</title>
+<meta name="description" content="An interactive national map of rat and rodent complaints pulled live from ten US municipal 311 open-data systems, with date and city filters and CSV export." />
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<link rel="preconnect" href="https://unpkg.com" />
+<link rel="stylesheet" href="style.css" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐀</text></svg>" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="dot">🐀</span>
+    <h1>US Rat Complaint Atlas</h1>
+    <span class="badge" id="top-badge">loading…</span>
+  </div>
+  <nav>
+    <button class="btn" id="btn-method">Data &amp; methodology</button>
+    <button class="btn" id="btn-share">Copy link</button>
+  </nav>
+</header>
+
+<div class="layout">
+  <aside id="panel">
+    <h2>Cities</h2>
+    <div class="presets" id="city-presets">
+      <button data-cities="all">All 10</button>
+      <button data-cities="big">Big six</button>
+      <button data-cities="none">Clear</button>
+    </div>
+    <div class="city-list" id="city-list"></div>
+
+    <h2>Date range</h2>
+    <div class="dates">
+      <input type="date" id="from" aria-label="Start date" />
+      <span>to</span>
+      <input type="date" id="to" aria-label="End date" />
+    </div>
+    <div class="presets" id="range-presets">
+      <button data-range="12">Last 12 months</button>
+      <button data-range="36">Last 3 years</button>
+      <button data-range="all">All years</button>
+    </div>
+
+    <h2>In view</h2>
+    <div class="big"><span id="stat-total">—</span><small id="stat-total-label">geolocated complaints</small></div>
+    <div class="sub" id="stat-sub"></div>
+    <canvas id="spark"></canvas>
+    <div class="mix" id="type-mix"></div>
+
+    <h2>Where they come from</h2>
+    <div class="bars" id="city-bars"></div>
+
+    <div class="export">
+      <button class="btn primary" id="btn-csv">Download CSV for this selection</button>
+      <div id="save-fallback"></div>
+      <div id="export-note"></div>
+    </div>
+
+    <div class="tiny">
+      Complaint volume is not rat population. Each city records a different event — a resident
+      sighting in New York, a baiting request in Chicago, an inspection request in Washington —
+      so levels are not comparable across cities. Compare the shape of each city's own data, not its height.
+    </div>
+  </aside>
+
+  <div id="map">
+    <div class="loadbar" id="loadbar"><span class="spin"></span><span id="loadtext">loading data…</span></div>
+    <div class="map-badge">
+      <b>Adaptive clusters</b> — each dot is a group of complaints at this zoom; zoom in to split it.
+      <div class="scale"><i></i><span>fewer → more complaints per cell</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="modal">
+  <div class="modal">
+    <button class="btn ghost close" id="btn-close-modal">Close ✕</button>
+    <h2>Where this map comes from</h2>
+    <p>
+      Every record is pulled by <code>scripts/fetch_311.py</code> from a public municipal 311 API —
+      Socrata (NYC, Chicago, Cincinnati, Cambridge, Baton Rouge), CKAN (Boston, Pittsburgh) or ArcGIS
+      REST (Washington DC, Baltimore, Detroit). Nothing is synthetic, modelled, or hand-entered. The
+      script can be re-run at any time; it refetches the current year and adds new years as they appear.
+    </p>
+    <div class="note">
+      <b>Read this before comparing cities.</b> A 311 record is a <i>report about a place</i>, not a rat.
+      Chicago counts requests to bait a location; New York counts resident sightings; Washington counts
+      inspection requests opened by DC Health. Cities also differ in how well they publicise 311, so a
+      high count can mean more rats, more reporting, or both. This atlas is built for studying
+      <i>within-city</i> patterns over time and space, not for ranking cities.
+    </div>
+    <h3>Coverage</h3>
+    <div style="overflow-x:auto"><table class="src" id="src-table"></table></div>
+    <h3>Fields in the export</h3>
+    <p>
+      <code>complaint_date, city, state, latitude, longitude, standardized_type, original_classification,
+      data_source, source_dataset</code>. Dates are ISO <code>YYYY-MM-DD</code>. Records without usable
+      coordinates are excluded from the map and the CSV — their count per city is in the table above.
+      The original classification is preserved verbatim next to the standardized one.
+    </p>
+    <h3>Limitations</h3>
+    <ul>
+      <li>Only cities that publish a rodent-specific 311 category <i>with</i> coordinates are included. Large cities that don't (e.g. Seattle, Los Angeles, San Francisco, Philadelphia, Dallas) are documented as checked and excluded rather than approximated.</li>
+      <li>Baltimore's scheduled baiting runs (<code>SW-Rat Rubout Proactive</code>, about 95% of its rodent rows) are excluded: they are the city's work calendar, not resident reports.</li>
+      <li>Chicago drops requests flagged <code>duplicate = true</code>; the historical Chicago dataset has no such flag.</li>
+      <li>Coordinates are published by the city, snapped to the address or block level. Rounding to 5 decimals is applied only for file size.</li>
+      <li>Coverage start dates differ by city (2012–2019); see the table. The most recent day varies by city's publication lag.</li>
+    </ul>
+    <h3>License &amp; credit</h3>
+    <p>
+      The code is MIT. The data belongs to each city and is redistributed under that city's open-data
+      terms; each dataset and its link is listed above and in <code>docs/DATA_SOURCES.md</code>.
+      Map tiles © OpenStreetMap contributors, © CARTO.
+    </p>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,1038 @@
+{
+ "cities": {
+  "baltimore": {
+   "types": [
+    "SW-Rat Rubout",
+    "SW-Rat Rubout Follow-up",
+    "SW-Rat Rubout Alley Concern (SW creation only)",
+    "HCD-Rodents"
+   ],
+   "years": {
+    "2012": {
+     "fetched": "2026-11-27T02:11:53Z",
+     "n": 10769,
+     "nocoord": 0
+    },
+    "2013": {
+     "fetched": "2026-11-27T02:12:03Z",
+     "n": 10678,
+     "nocoord": 0
+    },
+    "2014": {
+     "fetched": "2026-11-27T02:12:14Z",
+     "n": 9970,
+     "nocoord": 0
+    },
+    "2015": {
+     "fetched": "2026-11-27T02:12:26Z",
+     "n": 11480,
+     "nocoord": 9
+    },
+    "2016": {
+     "fetched": "2026-11-27T02:12:43Z",
+     "n": 10245,
+     "nocoord": 0
+    },
+    "2017": {
+     "fetched": "2026-11-27T02:12:52Z",
+     "n": 7886,
+     "nocoord": 7
+    },
+    "2018": {
+     "fetched": "2026-11-27T02:13:03Z",
+     "n": 6543,
+     "nocoord": 76
+    },
+    "2019": {
+     "fetched": "2026-11-27T02:13:14Z",
+     "n": 6394,
+     "nocoord": 0
+    },
+    "2020": {
+     "fetched": "2026-11-27T02:13:28Z",
+     "n": 6527,
+     "nocoord": 0
+    },
+    "2021": {
+     "fetched": "2026-11-27T02:13:48Z",
+     "n": 9819,
+     "nocoord": 0
+    },
+    "2022": {
+     "fetched": "2026-11-27T02:14:00Z",
+     "n": 7952,
+     "nocoord": 0
+    },
+    "2023": {
+     "fetched": "2026-11-27T02:14:11Z",
+     "n": 7391,
+     "nocoord": 0
+    },
+    "2024": {
+     "fetched": "2026-11-27T02:14:22Z",
+     "n": 6757,
+     "nocoord": 0
+    },
+    "2025": {
+     "fetched": "2026-11-27T02:14:32Z",
+     "n": 6020,
+     "nocoord": 0
+    },
+    "2026": {
+     "fetched": "2026-11-27T02:14:36Z",
+     "n": 7255,
+     "nocoord": 0
+    }
+   }
+  },
+  "baton-rouge": {
+   "types": [
+    "RODENT",
+    "BOTH (mosquito + rodent)"
+   ],
+   "years": {
+    "2012": {
+     "fetched": "2026-11-27T02:25:19Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2013": {
+     "fetched": "2026-11-27T02:25:27Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2014": {
+     "fetched": "2026-11-27T02:25:35Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2015": {
+     "fetched": "2026-11-27T02:25:36Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2016": {
+     "fetched": "2026-11-27T02:25:38Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2017": {
+     "fetched": "2026-11-27T02:25:44Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2018": {
+     "fetched": "2026-11-27T02:25:45Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2019": {
+     "fetched": "2026-11-27T02:25:47Z",
+     "n": 5066,
+     "nocoord": 6
+    },
+    "2020": {
+     "fetched": "2026-11-27T02:25:53Z",
+     "n": 4597,
+     "nocoord": 2
+    },
+    "2021": {
+     "fetched": "2026-11-27T02:25:58Z",
+     "n": 4321,
+     "nocoord": 5
+    },
+    "2022": {
+     "fetched": "2026-11-27T02:26:00Z",
+     "n": 4327,
+     "nocoord": 4
+    },
+    "2023": {
+     "fetched": "2026-11-27T02:26:01Z",
+     "n": 4478,
+     "nocoord": 1
+    },
+    "2024": {
+     "fetched": "2026-11-27T02:26:02Z",
+     "n": 3950,
+     "nocoord": 3
+    },
+    "2025": {
+     "fetched": "2026-11-27T02:26:03Z",
+     "n": 4056,
+     "nocoord": 20
+    },
+    "2026": {
+     "fetched": "2026-11-27T02:26:09Z",
+     "n": 3262,
+     "nocoord": 14
+    }
+   }
+  },
+  "boston": {
+   "types": [
+    "Rodent Activity",
+    "Rodent Control",
+    "Rodent complaint",
+    "pick up dead rodent (Street Light Outages)",
+    "Pick up Dead Animal (Rodent Activity)",
+    "Dead Animal Pick up (Rodent Activity)",
+    "Pick Up Dead Animal (Rodent Activity)",
+    "SCHEDULED  Rodent Activity (Rodent Activity)",
+    "Request for Street Cleaning (Rodent Activity)",
+    "SCHEDULED Rodent Activity (Rodent Activity)",
+    "Ground Maintenance: Little Scobie Playground - BPRD (Rodent Activity)",
+    "WEEDS (Rodent Activity)",
+    "Ground Maintenance: Clifford Playground - BPRD (Rodent Activity)",
+    "Ground Maintenance: Boston Common - BPRD (Rodent Activity)",
+    "Equipment Repair: Copley Square - BPRD (Rodent Activity)",
+    "Injured Squirrel (Rodent Activity)",
+    "Ground Maintenance: Titus Sparrow Park - BPRD (Rodent Activity)",
+    "Pcik up Dead Animal (Rodent Activity)",
+    "Ground Maintenance: Franklin Square - BPRD (Rodent Activity)",
+    "SCH3/29Rodent Activity (Rodent Activity)",
+    "Ground Maintenance: Byrne Playground - BPRD (Rodent Activity)",
+    "SCH9/27Rodent Activity (Rodent Activity)",
+    "SCH11/9Rodent Activity (Rodent Activity)",
+    "SCH12/6Rodent Activity (Rodent Activity)",
+    "SCH2/23Rodent Activity (Rodent Activity)",
+    "SCH5/2Rodent Activity (Rodent Activity)",
+    "Ground Maintenance: Franklin Park - BPRD (Rodent Activity)",
+    "SCH6/7Rodent Activity (Rodent Activity)",
+    "CONCRETE (Rodent Activity)",
+    "SCH6/13Rodent Activity (Rodent Activity)",
+    "Ground Maintenance: Hemenway Playground - BPRD (Rodent Activity)",
+    "POWER WASH (Rodent Activity)",
+    "SCH8/2Rodent Activity (Rodent Activity)",
+    "Ground Maintenance: Dorchester Park - BPRD (Rodent Activity)",
+    "Pikc up Dead Animal (Rodent Activity)",
+    "SCH112/7Rodent Activity (Rodent Activity)",
+    "SCH2/1Rodent Activity (Rodent Activity)",
+    "SCH2/6Rodent Activity (Rodent Activity)",
+    "SCH2/9Rodent Activity (Rodent Activity)",
+    "SCH3/15Rodent Activity (Rodent Activity)",
+    "Ground Maintenance: Ramsay Park/Jim Rice Field - BPRD (Rodent Activity)",
+    "Ground Maintenance: Allen Park - BPRD (Rodent Activity)",
+    "Ground Maintenance: Joe Moakley Park - BPRD (Rodent Activity)",
+    "Rodent Activity (Pest Infestation - Residential)",
+    "BRICKS (Rodent Activity)",
+    "SCH 07/19 Rodent Activity (Rodent Activity)",
+    "Ground Maintenance: Billings Field - BPRD (Rodent Activity)",
+    "Park Maintenance: Paul Revere Mall (Rodent Activity)",
+    "DISP 5/1 Rodent Activity (Rodent Activity)",
+    "Sidewalk Repair (Make Safe) (Rodent Activity)",
+    "Rodent Activity (Rat Bite)",
+    "SCH7/28Rodent Activity (Rodent Activity)",
+    "SCH11/13Rodent Activity (Rodent Activity)",
+    "SCH3/9Rodent Activity (Rodent Activity)",
+    "SCH3/10Rodent Activity (Rodent Activity)",
+    "SCH5/12Rodent Activity (Rodent Activity)",
+    "Trash (Rodent Activity)"
+   ],
+   "years": {
+    "2012": {
+     "fetched": "2026-11-27T02:14:38Z",
+     "n": 2154,
+     "nocoord": 130
+    },
+    "2013": {
+     "fetched": "2026-11-27T02:14:39Z",
+     "n": 2035,
+     "nocoord": 71
+    },
+    "2014": {
+     "fetched": "2026-11-27T02:14:39Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2015": {
+     "fetched": "2026-11-27T02:14:40Z",
+     "n": 1937,
+     "nocoord": 30
+    },
+    "2016": {
+     "fetched": "2026-11-27T02:14:41Z",
+     "n": 2742,
+     "nocoord": 37
+    },
+    "2017": {
+     "fetched": "2026-11-27T02:14:42Z",
+     "n": 2872,
+     "nocoord": 43
+    },
+    "2018": {
+     "fetched": "2026-11-27T02:14:43Z",
+     "n": 2546,
+     "nocoord": 29
+    },
+    "2019": {
+     "fetched": "2026-11-27T02:14:44Z",
+     "n": 2337,
+     "nocoord": 18
+    },
+    "2020": {
+     "fetched": "2026-11-27T02:14:44Z",
+     "n": 3463,
+     "nocoord": 43
+    },
+    "2021": {
+     "fetched": "2026-11-27T02:14:45Z",
+     "n": 3603,
+     "nocoord": 9
+    },
+    "2022": {
+     "fetched": "2026-11-27T02:14:46Z",
+     "n": 4255,
+     "nocoord": 8
+    },
+    "2023": {
+     "fetched": "2026-11-27T02:14:47Z",
+     "n": 3937,
+     "nocoord": 0
+    },
+    "2024": {
+     "fetched": "2026-11-27T02:14:49Z",
+     "n": 5009,
+     "nocoord": 5
+    },
+    "2025": {
+     "fetched": "2026-11-27T02:14:50Z",
+     "n": 5223,
+     "nocoord": 3
+    },
+    "2026": {
+     "fetched": "2026-11-27T02:14:50Z",
+     "n": 5621,
+     "nocoord": 15
+    }
+   }
+  },
+  "cambridge": {
+   "types": [
+    "Rodent Sighting",
+    "Dead rat",
+    "Dead Rodent",
+    "Rat",
+    "Rat holes",
+    "Rodent complaint (other)",
+    "Dead rodent Elm near Webster",
+    "Abundance of rats",
+    "Uncovered trash can and signs of rodents",
+    "Dead Rodent Sighting",
+    "Rodent Sighting - Harvard yard",
+    "Dying rodent",
+    "Rat sighting",
+    "Rats in street and courtyard",
+    "Rat burrow at Playground and ongoing rat problems",
+    "Rodent Sighting / Street Defect",
+    "Rodent invasion",
+    "Rodent Sighting (Burrows)",
+    "Uncovered trash cans attracting rodents",
+    "Rodents",
+    "Very large dead rat next to old Longfellow School",
+    "Rodent Sighting and Landscaping",
+    "3+ weeks of garbage piling up in open cans attracting rats",
+    "More rodents than usual",
+    "dead rat in street",
+    "Dead Rat",
+    "Several rodent",
+    "Rodent Sighting on James Way",
+    "Rodent Sighting / Poor Trash Disposal",
+    "church leaving trash and food on sidewalk attracting rats",
+    "Dead rat, abandoned shopping cart",
+    "Rodent Sighting - Bed Bugs",
+    "Rodent Sightings",
+    "lots of trash and food left on property attracting rats",
+    "Rodent Sighting crossing Bigelow st.",
+    "Dead rat on street",
+    "Rats everywhere, multiplying daily",
+    "Rodent Sighting rat seen at 136 walden",
+    "rats in dumpster area",
+    "Family of rats",
+    "Dumpster--overflowing and attracting rats",
+    "Major Rat Issues",
+    "Dead Rat (run over by car) next to sidewalk",
+    "rodent (rat) sighting",
+    "Open food package  an rodent sroppings",
+    "Rodent Sighting on Sherman Street",
+    "Rodent Sighting - Rat",
+    "Dead rats",
+    "rodents",
+    "Rats running around",
+    "Rodents?",
+    "Rat in Fainwood Circle this a.m.",
+    "Rats Sighted",
+    "Standing Water at Vacant Lot Creating Rodent Problem",
+    "Rodents, trash, blighted property, falling fence, overgrown weeds, dead tree",
+    "Rodent Sighting/Large Rats",
+    "Rodent Problem - Dumpster Not Closed",
+    "Potential rodent problem",
+    "Trash/Rodent Sighting",
+    "Overgrown bushes encroaching on sidewalk, trash, rodents",
+    "Lots of garbage in the park and street attracting rats",
+    "Rat activity",
+    "dumpster in need of repair and has rodents",
+    "Rodents/Trash Overflow",
+    "Dead rodent",
+    "Rats, offensive smells, trash",
+    "Overflowing trash- rats",
+    "trash overflow, rodents spotted",
+    "Rodent Management During Construction",
+    "Replace trash in Alden Playground with rodent-proof trash bin",
+    "Replace open trash barrel with rodent-proof trash receptacle",
+    "Please install rodent proof trash barrel at Raymond Park",
+    "Disgusting Garbarge Attracting Rats at 190 Thorndike Street",
+    "Trash bin chewed through by rodents, need replacement",
+    "Need a Rodent-Proof Trash Barrel in Toddler Play Area at Alden Park",
+    "6+ garbage cans that seem to have rodent damage",
+    "Daily feeding of rats",
+    "dead rat (?) on the road",
+    "Need rodent-proof trash bin at Alden Playground",
+    "Haven for rats overgrown weeds",
+    "Install Rodent-Proof Trash Barrel at Alden Play Area",
+    "Rats",
+    "Second Rat restaurant on Pearl street",
+    "Third rat restaurant location on Pearl street",
+    "Another Rat restaurant open on Pearl",
+    "Rat restaurant open again",
+    "Rats restaurant is open again",
+    "Dead Rat on sidewalk",
+    "Rat infestation in newly built house",
+    "Lunch Garbage feeding rats",
+    "Multiple rat sightings",
+    "Infested with rats in my housing cimo",
+    "Trash with rats",
+    "Stop lutting dumpsters outside all week - huge rat problem",
+    "Rodent gnawing marks and hole new trash bin",
+    "Rodent Issue",
+    "Fire and rodent hazard",
+    "Rats \ud83d\udc00",
+    "rat holes",
+    "Rodent sightings and rodent holes at 6 - 8 Oakland Street.",
+    "Smashed rat on roadway",
+    "Construction - Street Closures/Rodents",
+    "Rat fest",
+    "Birds being fed - potential rodent cause",
+    "Compost bin is rodent hazard",
+    "Dead Rats in a bucket of water being kept in alley way",
+    "Rodent Poison Tampering",
+    "Open rat Trap",
+    "Overflowing trash and rats",
+    "Black trash bags with rodent holes on front yard for months",
+    "Dead rat in road right hand side of split island",
+    "Rodent boxes along Mass Ave",
+    "rats",
+    "neighbor saw rats",
+    "RAT Problem",
+    "Overflowing trash and rodent issue",
+    "Rodent activity",
+    "Rodent Problem - Many Rats",
+    "Bird feeder attracting pigeons and rats",
+    "Rat Nest",
+    "Rat bait at Surya restaurant",
+    "Abandoned grocery delivery that rats had a picnic on and left the remnants",
+    "Broken Rat Trap",
+    "23 Valentine feeding rats and pigeons daily",
+    "Rat poop and old food",
+    "Garbage on ground, rat food",
+    "Trash accessible to rats",
+    "Dead rat on sidewalk",
+    "Large rodent infestation near 5 Eighth Street",
+    "Rat Colony",
+    "Dangerous rat poisoning placement",
+    "Loose rat poison",
+    "Rat poison on bike path",
+    "Flat DEAD RAT",
+    "Collect Rodent Damaged Trash Can"
+   ],
+   "years": {
+    "2012": {
+     "fetched": "2026-11-27T02:24:30Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2013": {
+     "fetched": "2026-11-27T02:24:31Z",
+     "n": 1,
+     "nocoord": 0
+    },
+    "2014": {
+     "fetched": "2026-11-27T02:24:31Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2015": {
+     "fetched": "2026-11-27T02:24:32Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2016": {
+     "fetched": "2026-11-27T02:24:33Z",
+     "n": 210,
+     "nocoord": 0
+    },
+    "2017": {
+     "fetched": "2026-11-27T02:24:34Z",
+     "n": 191,
+     "nocoord": 0
+    },
+    "2018": {
+     "fetched": "2026-11-27T02:24:43Z",
+     "n": 234,
+     "nocoord": 0
+    },
+    "2019": {
+     "fetched": "2026-11-27T02:24:44Z",
+     "n": 244,
+     "nocoord": 0
+    },
+    "2020": {
+     "fetched": "2026-11-27T02:24:55Z",
+     "n": 769,
+     "nocoord": 0
+    },
+    "2021": {
+     "fetched": "2026-11-27T02:24:56Z",
+     "n": 854,
+     "nocoord": 0
+    },
+    "2022": {
+     "fetched": "2026-11-27T02:25:06Z",
+     "n": 861,
+     "nocoord": 0
+    },
+    "2023": {
+     "fetched": "2026-11-27T02:25:08Z",
+     "n": 432,
+     "nocoord": 0
+    },
+    "2024": {
+     "fetched": "2026-11-27T02:25:09Z",
+     "n": 522,
+     "nocoord": 0
+    },
+    "2025": {
+     "fetched": "2026-11-27T02:25:11Z",
+     "n": 530,
+     "nocoord": 0
+    },
+    "2026": {
+     "fetched": "2026-11-27T02:25:13Z",
+     "n": 464,
+     "nocoord": 0
+    }
+   }
+  },
+  "chicago": {
+   "types": [
+    "Rodent Baiting/Rat Complaint"
+   ],
+   "years": {
+    "2012": {
+     "fetched": "2026-11-27T01:56:06Z",
+     "n": 41529,
+     "nocoord": 3
+    },
+    "2013": {
+     "fetched": "2026-11-27T01:56:08Z",
+     "n": 33735,
+     "nocoord": 1
+    },
+    "2014": {
+     "fetched": "2026-11-27T01:56:10Z",
+     "n": 32798,
+     "nocoord": 1
+    },
+    "2015": {
+     "fetched": "2026-11-27T01:56:14Z",
+     "n": 36390,
+     "nocoord": 1
+    },
+    "2016": {
+     "fetched": "2026-11-27T01:56:24Z",
+     "n": 49968,
+     "nocoord": 4
+    },
+    "2017": {
+     "fetched": "2026-11-27T01:56:28Z",
+     "n": 50878,
+     "nocoord": 2
+    },
+    "2018": {
+     "fetched": "2026-11-27T01:56:38Z",
+     "n": 38953,
+     "nocoord": 3
+    },
+    "2019": {
+     "fetched": "2026-11-27T01:56:41Z",
+     "n": 39298,
+     "nocoord": 116
+    },
+    "2020": {
+     "fetched": "2026-11-27T01:56:55Z",
+     "n": 51700,
+     "nocoord": 64
+    },
+    "2021": {
+     "fetched": "2026-11-27T01:57:34Z",
+     "n": 61390,
+     "nocoord": 52
+    },
+    "2022": {
+     "fetched": "2026-11-27T01:57:36Z",
+     "n": 47732,
+     "nocoord": 57
+    },
+    "2023": {
+     "fetched": "2026-11-27T01:58:10Z",
+     "n": 47105,
+     "nocoord": 11
+    },
+    "2024": {
+     "fetched": "2026-11-27T01:58:12Z",
+     "n": 44547,
+     "nocoord": 13
+    },
+    "2025": {
+     "fetched": "2026-11-27T01:58:44Z",
+     "n": 43068,
+     "nocoord": 15
+    },
+    "2026": {
+     "fetched": "2026-11-27T01:58:48Z",
+     "n": 41682,
+     "nocoord": 32
+    }
+   }
+  },
+  "cincinnati": {
+   "types": [
+    "RATS, IN A BUILDING",
+    "RATS, OUTSIDE A BUILDING",
+    "RATS, PROBLEM/INFESTATION",
+    "RATS, IN OR AROUND A BUILDING",
+    "RATS IN SEWER, REM REQ",
+    "INSTITUTION, RATS IN  BLDG",
+    "FOOD OPERATION, RODENTS",
+    "RATS, CHILDRENS HOSP REFERRAL",
+    "SCHOOL, RODENTS IN OR AROUND",
+    "RODENT/INSECT INFEST, NURSE HM",
+    "RODENT/INSECT INFEST, HOTEL/MT"
+   ],
+   "years": {
+    "2012": {
+     "fetched": "2026-11-27T02:22:57Z",
+     "n": 236,
+     "nocoord": 0
+    },
+    "2013": {
+     "fetched": "2026-11-27T02:23:04Z",
+     "n": 319,
+     "nocoord": 0
+    },
+    "2014": {
+     "fetched": "2026-11-27T02:23:07Z",
+     "n": 239,
+     "nocoord": 0
+    },
+    "2015": {
+     "fetched": "2026-11-27T02:23:12Z",
+     "n": 209,
+     "nocoord": 0
+    },
+    "2016": {
+     "fetched": "2026-11-27T02:23:19Z",
+     "n": 294,
+     "nocoord": 0
+    },
+    "2017": {
+     "fetched": "2026-11-27T02:23:22Z",
+     "n": 290,
+     "nocoord": 0
+    },
+    "2018": {
+     "fetched": "2026-11-27T02:23:27Z",
+     "n": 303,
+     "nocoord": 0
+    },
+    "2019": {
+     "fetched": "2026-11-27T02:23:33Z",
+     "n": 303,
+     "nocoord": 0
+    },
+    "2020": {
+     "fetched": "2026-11-27T02:23:37Z",
+     "n": 277,
+     "nocoord": 0
+    },
+    "2021": {
+     "fetched": "2026-11-27T02:23:43Z",
+     "n": 326,
+     "nocoord": 0
+    },
+    "2022": {
+     "fetched": "2026-11-27T02:23:47Z",
+     "n": 272,
+     "nocoord": 0
+    },
+    "2023": {
+     "fetched": "2026-11-27T02:23:53Z",
+     "n": 259,
+     "nocoord": 0
+    },
+    "2024": {
+     "fetched": "2026-11-27T02:23:58Z",
+     "n": 228,
+     "nocoord": 0
+    },
+    "2025": {
+     "fetched": "2026-11-27T02:24:03Z",
+     "n": 226,
+     "nocoord": 0
+    },
+    "2026": {
+     "fetched": "2026-11-27T02:24:08Z",
+     "n": 275,
+     "nocoord": 0
+    }
+   }
+  },
+  "detroit": {
+   "types": [
+    "Rodent Extermination"
+   ],
+   "years": {
+    "2012": {
+     "fetched": "2026-11-27T02:14:51Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2013": {
+     "fetched": "2026-11-27T02:14:52Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2014": {
+     "fetched": "2026-11-27T02:14:53Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2015": {
+     "fetched": "2026-11-27T02:15:39Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2016": {
+     "fetched": "2026-11-27T02:15:55Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2017": {
+     "fetched": "2026-11-27T02:16:35Z",
+     "n": 3122,
+     "nocoord": 0
+    },
+    "2018": {
+     "fetched": "2026-11-27T02:17:04Z",
+     "n": 4242,
+     "nocoord": 0
+    },
+    "2019": {
+     "fetched": "2026-11-27T02:17:56Z",
+     "n": 4066,
+     "nocoord": 0
+    },
+    "2020": {
+     "fetched": "2026-11-27T02:19:13Z",
+     "n": 2625,
+     "nocoord": 0
+    },
+    "2021": {
+     "fetched": "2026-11-27T02:20:52Z",
+     "n": 3188,
+     "nocoord": 0
+    },
+    "2022": {
+     "fetched": "2026-11-27T02:21:15Z",
+     "n": 2782,
+     "nocoord": 0
+    },
+    "2023": {
+     "fetched": "2026-11-27T02:21:45Z",
+     "n": 1994,
+     "nocoord": 0
+    },
+    "2024": {
+     "fetched": "2026-11-27T02:22:22Z",
+     "n": 1817,
+     "nocoord": 0
+    },
+    "2025": {
+     "fetched": "2026-11-27T02:22:23Z",
+     "n": 1778,
+     "nocoord": 0
+    },
+    "2026": {
+     "fetched": "2026-11-27T02:27:19Z",
+     "n": 1563,
+     "nocoord": 0
+    }
+   }
+  },
+  "nyc": {
+   "types": [
+    "Rodent complaint",
+    "Rodent / Rat Sighting",
+    "Rodent / Mouse Sighting",
+    "Rodent / Signs of Rodent Activity",
+    "Rodent / Rat Bite",
+    "Rodent / Rodent Bite",
+    "Rodent / Unsanitary Animal Pvt Property",
+    "Rodent / Condition Attracting Rodents",
+    "Rodent / Signs of Rodents",
+    "Rodent / Rodent Bite - PCS Only"
+   ],
+   "years": {
+    "2012": {
+     "fetched": "2026-11-27T01:50:19Z",
+     "n": 21210,
+     "nocoord": 117
+    },
+    "2013": {
+     "fetched": "2026-11-27T01:50:42Z",
+     "n": 22247,
+     "nocoord": 98
+    },
+    "2014": {
+     "fetched": "2026-11-27T01:50:44Z",
+     "n": 24397,
+     "nocoord": 118
+    },
+    "2015": {
+     "fetched": "2026-11-27T01:51:25Z",
+     "n": 29208,
+     "nocoord": 121
+    },
+    "2016": {
+     "fetched": "2026-11-27T01:52:17Z",
+     "n": 31256,
+     "nocoord": 183
+    },
+    "2017": {
+     "fetched": "2026-11-27T01:52:19Z",
+     "n": 34869,
+     "nocoord": 206
+    },
+    "2018": {
+     "fetched": "2026-11-27T01:52:23Z",
+     "n": 32356,
+     "nocoord": 174
+    },
+    "2019": {
+     "fetched": "2026-11-27T01:53:18Z",
+     "n": 31108,
+     "nocoord": 536
+    },
+    "2020": {
+     "fetched": "2026-11-27T01:53:20Z",
+     "n": 27280,
+     "nocoord": 303
+    },
+    "2021": {
+     "fetched": "2026-11-27T01:53:23Z",
+     "n": 38410,
+     "nocoord": 399
+    },
+    "2022": {
+     "fetched": "2026-11-27T01:53:26Z",
+     "n": 40791,
+     "nocoord": 330
+    },
+    "2023": {
+     "fetched": "2026-11-27T01:53:48Z",
+     "n": 41563,
+     "nocoord": 185
+    },
+    "2024": {
+     "fetched": "2026-11-27T01:54:24Z",
+     "n": 39475,
+     "nocoord": 251
+    },
+    "2025": {
+     "fetched": "2026-11-27T01:54:31Z",
+     "n": 31247,
+     "nocoord": 65
+    },
+    "2026": {
+     "fetched": "2026-11-27T01:54:50Z",
+     "n": 25379,
+     "nocoord": 57
+    }
+   }
+  },
+  "pittsburgh": {
+   "types": [
+    "Rodent Control"
+   ],
+   "years": {
+    "2012": {
+     "fetched": "2026-11-27T02:24:09Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2013": {
+     "fetched": "2026-11-27T02:24:10Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2014": {
+     "fetched": "2026-11-27T02:24:11Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2015": {
+     "fetched": "2026-11-27T02:24:12Z",
+     "n": 395,
+     "nocoord": 6
+    },
+    "2016": {
+     "fetched": "2026-11-27T02:24:12Z",
+     "n": 741,
+     "nocoord": 15
+    },
+    "2017": {
+     "fetched": "2026-11-27T02:24:13Z",
+     "n": 965,
+     "nocoord": 20
+    },
+    "2018": {
+     "fetched": "2026-11-27T02:24:13Z",
+     "n": 899,
+     "nocoord": 3
+    },
+    "2019": {
+     "fetched": "2026-11-27T02:24:14Z",
+     "n": 827,
+     "nocoord": 8
+    },
+    "2020": {
+     "fetched": "2026-11-27T02:24:14Z",
+     "n": 746,
+     "nocoord": 1
+    },
+    "2021": {
+     "fetched": "2026-11-27T02:24:15Z",
+     "n": 747,
+     "nocoord": 9
+    },
+    "2022": {
+     "fetched": "2026-11-27T02:24:15Z",
+     "n": 741,
+     "nocoord": 8
+    },
+    "2023": {
+     "fetched": "2026-11-27T02:24:16Z",
+     "n": 700,
+     "nocoord": 7
+    },
+    "2024": {
+     "fetched": "2026-11-27T02:24:16Z",
+     "n": 559,
+     "nocoord": 4
+    },
+    "2025": {
+     "fetched": "2026-11-27T02:24:17Z",
+     "n": 534,
+     "nocoord": 0
+    },
+    "2026": {
+     "fetched": "2026-11-27T02:24:17Z",
+     "n": 530,
+     "nocoord": 0
+    }
+   }
+  },
+  "washington-dc": {
+   "types": [
+    "Rodent Inspection and Treatment",
+    "DC Health Rodent & Vector Control"
+   ],
+   "years": {
+    "2012": {
+     "fetched": "2026-11-27T01:59:02Z",
+     "n": 0,
+     "nocoord": 0
+    },
+    "2013": {
+     "fetched": "2026-11-27T01:59:07Z",
+     "n": 202,
+     "nocoord": 0
+    },
+    "2014": {
+     "fetched": "2026-11-27T01:59:14Z",
+     "n": 920,
+     "nocoord": 0
+    },
+    "2015": {
+     "fetched": "2026-11-27T01:59:24Z",
+     "n": 1779,
+     "nocoord": 0
+    },
+    "2016": {
+     "fetched": "2026-11-27T01:59:45Z",
+     "n": 3534,
+     "nocoord": 0
+    },
+    "2017": {
+     "fetched": "2026-11-27T02:00:25Z",
+     "n": 5311,
+     "nocoord": 0
+    },
+    "2018": {
+     "fetched": "2026-11-27T02:00:57Z",
+     "n": 5716,
+     "nocoord": 0
+    },
+    "2019": {
+     "fetched": "2026-11-27T02:01:36Z",
+     "n": 6598,
+     "nocoord": 0
+    },
+    "2020": {
+     "fetched": "2026-11-27T02:02:24Z",
+     "n": 8750,
+     "nocoord": 0
+    },
+    "2021": {
+     "fetched": "2026-11-27T02:03:33Z",
+     "n": 12209,
+     "nocoord": 0
+    },
+    "2022": {
+     "fetched": "2026-11-27T02:04:48Z",
+     "n": 13477,
+     "nocoord": 0
+    },
+    "2023": {
+     "fetched": "2026-11-27T02:06:20Z",
+     "n": 17831,
+     "nocoord": 0
+    },
+    "2024": {
+     "fetched": "2026-11-27T02:07:54Z",
+     "n": 16883,
+     "nocoord": 0
+    },
+    "2025": {
+     "fetched": "2026-11-27T02:09:25Z",
+     "n": 16684,
+     "nocoord": 0
+    },
+    "2026": {
+     "fetched": "2026-11-27T02:11:40Z",
+     "n": 19814,
+     "nocoord": 0
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,61 @@
+SEA n_types 47
+  SEA	298779	Illegal Dumping / Needles
+  SEA	276009	Abandoned Vehicle/72hr Parking Ordinance
+  SEA	262558	Unauthorized Encampment
+  SEA	257350	General Inquiry - Customer Service Bureau
+  SEA	248362	Abandoned Vehicle
+  SEA	236543	Graffiti
+  SEA	219811	Parking Enforcement
+  SEA	117318	General Inquiry - Transportation
+  SEA	116155	Pothole
+  SEA	72266	General Inquiry - City Light
+  SEA	56700	Parks and Recreation Maintenance
+  SEA	56392	Street Sign and Traffic Signal Maintenance
+  SEA	46818	Scooter or Bike Share Issue
+  SEA	46072	Streetlight Maintenance
+  SEA	43738	Overgrown Vegetation
+  SEA	32052	General Inquiry - Police Department
+  SEA	24863	Street Sign Maintenance
+  SEA	24575	General Inquiry - Public Utilities
+  SEA	20333	Clogged Storm Drain
+  SEA	12628	Public Litter and Recycling Cans
+  SEA	12097	Traffic Signal Maintenance
+  SEA	11726	Damaged Sidewalk
+  SEA	11185	Dead Animal
+  SEA	10768	Internet/Cable Issue
+  SEA	10745	General Inquiry - Animal Shelter
+  SEA	5615	Nuisance Dogs in a Park
+  SEA	4653	Nightlife Noise Complaint
+  SEA	4214	Animal Noise
+  SEA	3964	Seattle Center
+  SEA	3435	Bicycle Facility Maintenance
+  SEA	2896	Taxi, TNC, or Limousine Complaint or Compliment
+  SEA	2669	Traffic Calming
+  SEA	2004	Business Related Complaint
+  SEA	1807	Lost a Pet
+  SEA	1403	Found a Pet
+  SEA	999	Pollution Report Form
+  SEA	828	Towing Impound Complaint
+  SEA	674	Public Garage or Parking Lot Complaint
+  SEA	626	ADA Request (Transportation)
+  SEA	550	Business Violation of Public Health Requirements
+  SEA	517	Safe Routes to School
+  SEA	366	Feedback about the Find It, Fix It mobile app
+  SEA	334	Towing Complaint - Public Impound
+  SEA	254	Snow and Ice
+  SEA	242	Feedback about the Customer Service Requests Portal
+  SEA	217	Wireless or Small Cell Issue
+  SEA	14	Public Utilities Direct Mail Opt Out
+LA2020 n_types 12
+  LA2020	713535	Bulky Items
+  LA2020	345400	Graffiti Removal
+  LA2020	138064	Metal/Household Appliances
+  LA2020	129224	Illegal Dumping Pickup
+  LA2020	50456	Homeless Encampment
+  LA2020	49250	Electronic Waste
+  LA2020	24840	Dead Animal Removal
+  LA2020	22701	Other
+  LA2020	9568	Single Streetlight Issue
+  LA2020	7186	Multiple Streetlight Issue
+  LA2020	1115	Report Water Waste
+  LA2020	435	Feedback

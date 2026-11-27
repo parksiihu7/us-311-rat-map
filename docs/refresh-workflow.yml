@@ -1,0 +1,32 @@
+name: Refresh 311 rodent data
+
+on:
+  schedule:
+    # weekly, Monday 09:17 UTC (early morning US Eastern)
+    - cron: "17 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch current-year rodent complaints
+        run: python3 scripts/fetch_311.py
+      - name: Commit new data
+        run: |
+          git config user.name "rat-atlas-bot"
+          git config user.email "rat-atlas-bot@users.noreply.github.com"
+          git add data scripts/state.json
+          if git diff --cached --quiet; then
+            echo "no new data"
+          else
+            git commit -m "data: weekly 311 rodent refresh ($(date -u +%Y-%m-%d))"
+            git push
+          fi
